@@ -1,10 +1,15 @@
 CLI:
+
 terraform init   
+
 terraform plan   
+
 terraform apply  
 
 Destroy CLI:
+
 terraform plan -destroy
+
 terraform destroy
 
 -----------------------------------------------------
