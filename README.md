@@ -13,7 +13,7 @@ terraform plan -destroy
 terraform destroy
 
 -----------------------------------------------------
-GCP中，如果想Destroy，需要增加一行代碼：
+GCP中，如果想Destroy，需要增加一行代碼：deletion_protection = false
 
 resource "google_container_cluster" "primary" {
   name     = "my-gke-cluster"
