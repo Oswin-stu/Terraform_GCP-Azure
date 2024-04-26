@@ -25,7 +25,7 @@ resource "google_container_cluster" "primary" {
     }
   }
 
-  # 設置刪除保護未false以允許刪除
+  #設置刪除保護未false以允許刪除
   deletion_protection = false
 }
 
