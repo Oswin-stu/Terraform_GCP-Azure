@@ -7,6 +7,32 @@ Destroy CLI:
 terraform plan -destroy
 terraform destroy
 
+-----------------------------------------------------
+GCP中，如果想Destroy，需要增加一行代碼：
+
+resource "google_container_cluster" "primary" {
+  name     = "my-gke-cluster"
+  location = "us-central1"
+
+  remove_default_node_pool = true
+  initial_node_count = 1
+
+  ip_allocation_policy {}
+
+  master_auth {
+    client_certificate_config {
+      issue_client_certificate = false
+    }
+  }
+
+  # 設置刪除保護未false以允許刪除
+  deletion_protection = false
+}
+
+
+根據以上修改後，運行一下步驟才能destroy：
+1：terraform apply
+2：terraform destroy
 
 
 -------------------------------------------------------
