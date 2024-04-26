@@ -10,11 +10,17 @@ terraform destroy
 
 
 -------------------------------------------------------
+Azure中：
 
+provider "azurerm" {
+  features {}
+  client_id       = ""
+  client_secret   = ""
+  tenant_id       = ""
+  subscription_id = ""
+}
 
-
-
-
+以上輸入自己的憑證
 
 --------------------------------------------------------
 Windows:
