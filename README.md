@@ -18,9 +18,7 @@ GCP中，如果想Destroy，需要增加一行代碼：deletion_protection = fal
 以下是完整代碼：
 
 resource "google_container_cluster" "primary" {
-
   name     = "my-gke-cluster"
-  
   location = "us-central1"
 
   remove_default_node_pool = true
